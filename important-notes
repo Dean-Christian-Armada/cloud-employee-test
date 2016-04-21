@@ -1,0 +1,14 @@
+Important notes:
+
+1.) Kindly run "pip install -r requirements.txt" first
+2.) Did not really use a javascript framework because I use those for communication of client side to backend API and for Dom Manipulation.
+	- The project requirements and capabilities does not seem to require it as well.
+3.) Contacts template is located on the roots template folder
+4.) I included the angularjs, jquery and bootstrap javascripts as it is my standardd project template
+5.) Did not use Vagrant because I have limited access to the internet and I am more into Docker.
+6.) I used selenium for some few testing
+7.) I used django-compressor for auto-compressing upon page render
+8.) Admin
+			- username: admin
+			- password: cloudemployee
+9.) Github: https://github.com/Dean-Christian-Armada/cloud-employee-test

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<h2 class="text-center">List of Offices</h2>
+	<table class="table table-responsive">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Currency</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% if items %}
+				{% for item in items %}
+				<tr>
+					<td><a href="{% url 'offices_item' id=item.id %}">{{ item.name }}</a></td>
+					<td>{{ item.currency }}</td>
+				</tr>
+				{% endfor %}
+			{% else %}
+				<tr>
+					<td colspan="2">No Offices Avaliable</td>
+				</tr>
+			{% endif %}
+		</tbody>
+	</table>
+{% endblock %}

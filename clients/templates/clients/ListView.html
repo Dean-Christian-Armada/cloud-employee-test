@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2 class="text-center">List of Clients</h2>
+	<table class="table table-responsive">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Office</th>
+				<th>Number of Contacts</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% if items %}
+				{% for item in items %}
+				<tr>
+					<td><a href="{% url 'clients_item' id=item.id %}">{{ item.name }}</a></td>
+					<td>{{ item.office }}</td>
+					<!-- .count is used on the template tag for DRY coding on the custom methods -->
+					<td>{{ item.contactList.count }}</td>
+				</tr>
+				{% endfor %}
+			{% else %}
+				<tr>
+					<td colspan="3">No Clients Avaliable</td>
+				</tr>
+			{% endif %}
+		</tbody>
+	</table>
+{% endblock %}

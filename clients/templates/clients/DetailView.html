@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="text-center">
+		<h1>{{ item.name }}</h1>
+	</div>
+	<div class="col-lg-6 col-lg-offset-4">
+		<h4>Office: {{ item.office }}</h4>
+		<h4>Contacts:</h4>
+		<ul>
+			{% if item.contactList %}
+				{% for x in item.contactList %}
+					<li><a href="{% url 'contacts_item' id=x.id %}">{{ x }}</a></li>
+				{% endfor %}
+			{% else %}
+				<li>This client has currently no contacts</li>
+			{% endif %}
+		</ul>
+		<p><a href="{% url 'clients_index' %}">Return to Clients List</a></p>
+	</div>
+{% endblock %}

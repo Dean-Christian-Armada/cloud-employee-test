@@ -1,0 +1,26 @@
+[
+{
+  "model": "clients.client",
+  "pk": 1,
+  "fields": {
+    "office": 1,
+    "name": "Cloud Employee"
+  }
+},
+{
+  "model": "clients.client",
+  "pk": 2,
+  "fields": {
+    "office": 2,
+    "name": "Manship"
+  }
+},
+{
+  "model": "clients.client",
+  "pk": 3,
+  "fields": {
+    "office": 1,
+    "name": "UK Client"
+  }
+}
+]

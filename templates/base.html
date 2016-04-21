@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    {% block custom_meta_tags %}
+	    	<!-- Default SEO metas -->
+		  	<meta name="description" content="">
+				<meta name="keywords" content="">
+			{% endblock %}
+		<!-- tags for the tab icons -->
+		<!-- <link href="{% static 'images/favico.png' %}" type="image/png" rel="apple-touch-icon">
+		<link href="{% static 'images/favico.png' %}" type="image/png" rel="icon"> -->
+
+		<title>{% block title %} Cloud Employee Test Project {% endblock %}</title>
+		{% include 'main/header_css.html' %}
+	</head>
+	<body>
+		{% block header_content %}
+			<header>
+				{% include 'main/nav.html' %}
+			</header>
+		{% endblock %}
+
+		<div class="container">
+			{% block content %}
+				<!-- Default Content -->
+			{% endblock %}
+		</div>
+		
+		{% block footer_content %}
+			{% include 'main/footer.html' %}
+		{% endblock %}
+
+		{% include 'main/footer_js.html' %}
+		{% block inline_js %}
+			<!-- Default Inline Javascripts -->
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,18 @@
+[
+{
+  "model": "offices.office",
+  "pk": 1,
+  "fields": {
+    "name": "United Kingdom",
+    "currency": "EU"
+  }
+},
+{
+  "model": "offices.office",
+  "pk": 2,
+  "fields": {
+    "name": "Makati, Philippines",
+    "currency": "PHP"
+  }
+}
+]
